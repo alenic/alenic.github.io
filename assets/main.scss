@@ -22,11 +22,11 @@ body {
 }
 
 a, a:hover, a:visited {
-  color: rgb(255, 51, 129);
+  color: rgb(218, 123, 0);
 }
 
 .title {
-  color: rgb(255, 51, 129);
+  color: rgb(218, 123, 0);
   font-size: 1.5rem;
 }
 
@@ -59,8 +59,9 @@ h3 {
   padding-top: 0.5rem;
   position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 100% !important;
   height: 6rem;
+  margin: 0 auto !important;
 }
 
 .fa, a.fa, a:hover.fa, a:visited.fa {

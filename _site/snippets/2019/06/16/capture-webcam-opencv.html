@@ -23,7 +23,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="http://localhost:4000">Home<span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" href="#">About me</a>
@@ -50,8 +50,8 @@
 
 <span class="n">webcam_id</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">capture</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="n">webcam_id</span><span class="p">)</span>
-<span class="c1"># You can set custom resolution if your webcam support it, otherwise the method capture.read() will fail
-# (comment the following 4 lines of code if you want to use the default resolution)
+<span class="c1"># You can set custom resolution if your webcam can support it, otherwise the method capture.read() fails
+# (comment the following 4 lines of code if you want to use the default webcam resolution)
 </span><span class="n">webcam_res_width</span> <span class="o">=</span> <span class="mi">640</span>
 <span class="n">webcam_res_height</span> <span class="o">=</span> <span class="mi">480</span>
 <span class="n">capture</span><span class="o">.</span><span class="nb">set</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">webcam_res_width</span><span class="p">)</span>
@@ -60,7 +60,7 @@
 <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
   <span class="n">ret</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">capture</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
   <span class="k">if</span> <span class="n">ret</span><span class="p">:</span>
-    <span class="c1"># process the acquired frame
+    <span class="c1"># process the frame
 </span>    <span class="c1"># ...
 </span>    <span class="c1"># show the frame
 </span>    <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s">'original frame'</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>

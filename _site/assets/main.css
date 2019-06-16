@@ -6764,10 +6764,10 @@ body {
   padding-bottom: 10rem; }
 
 a, a:hover, a:visited {
-  color: #ff3381; }
+  color: #da7b00; }
 
 .title {
-  color: #ff3381;
+  color: #da7b00;
   font-size: 1.5rem; }
 
 .subtitle {
@@ -6790,8 +6790,9 @@ h3 {
   padding-top: 0.5rem;
   position: absolute;
   bottom: 0;
-  width: 100%;
-  height: 6rem; }
+  width: 100% !important;
+  height: 6rem;
+  margin: 0 auto !important; }
 
 .fa, a.fa, a:hover.fa, a:visited.fa {
   padding-left: 0.5rem;
