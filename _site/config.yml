@@ -7,3 +7,4 @@ style: compressed
 
 
 permalink: /:categories/:title
+highlighter: rouge

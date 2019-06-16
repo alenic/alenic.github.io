@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<!-- head -->
+<head>
+    <meta charset="UTF-8">
+    <title>Alessandro Nicolosi's blog</title>
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+<!-- end_head -->
+<body>
+
+<div class="container">
+
+
+<!--navigation-->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="http://localhost:4000"><img src="/assets/img/logo.svg" height="30" alt=""></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="http://localhost:4000">Home<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#">About me</a>
+    </div>
+  </div>
+</nav>
+
+  <!--end_navigation-->
+
+<article>
+  <h1>Capture webcam with opencv - <span style="font-size: 0.8em; font-style: italic;"></span></h1>
+
+  <p>OpenCV is a simple and nice library for image processing and computer vision. This is a very basic code for starting experiments with your webcam.</p>
+
+<p>This code in Python 3, captures the webcam’s frames and show it. If you press the ‘q’ key it will exit from the main cycle</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">cv2</span>
+
+<span class="n">webcam_id</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">capture</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="n">webcam_id</span><span class="p">)</span>
+<span class="c1"># Can I set a custom webcam resolution ? Yes, if your webcam can support it, if not the capture.read() will fail
+# comment the following 4 lines of code if you want to use the default resolution
+</span><span class="n">webcam_res_width</span> <span class="o">=</span> <span class="mi">640</span>
+<span class="n">webcam_res_height</span> <span class="o">=</span> <span class="mi">480</span>
+<span class="n">capture</span><span class="o">.</span><span class="nb">set</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">webcam_res_width</span><span class="p">)</span>
+<span class="n">capture</span><span class="o">.</span><span class="nb">set</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">webcam_res_height</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+  <span class="n">ret</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">capture</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+  <span class="k">if</span> <span class="n">ret</span><span class="p">:</span>
+    <span class="c1"># process the acquired frame
+</span>    <span class="c1"># ...
+</span>    <span class="c1"># show the frame
+</span>    <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s">'original frame'</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+    <span class="c1"># wait millis_delay milliseconds for a pressed key (if millis_delay &lt;= 0 waits a key events indefinitely)
+</span>    <span class="n">millis_delay</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">key_pressed</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="n">millis_delay</span><span class="p">)</span>
+    <span class="c1"># break the while cycle if the key q is pressed
+</span>    <span class="k">if</span> <span class="n">key_pressed</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="s">'q'</span><span class="p">):</span>
+      <span class="k">break</span>
+
+<span class="c1"># Safetly close the video capture and imshow windows
+</span><span class="n">capture</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span></code></pre></figure>
+
+<p>You can download the code from: <a href="/assets/code/capture-webcam/capture-webcam.py">capture-webcam.py</a></p>
+
+
+</article>
+</div>
+
+  <footer class="footer bg-dark text-light text-center">
+    <div class="container">
+      Alessandro Nicolosi
+      <br>
+      <br>
+      <a href="https://github.com/alenic" class="fa fa-github"></a>
+      <a href="https://www.linkedin.com/in/alessandro-nicolosi-88a29b7b/" class="fa fa-linkedin"></a>
+    </div>
+</footer>
+  
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript"
+		src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config( 
+						{
+							tex2jax: {inlineMath: [['$','$']],
+												displayMath: [['$$','$$']]
+						},
+							"HTML-CSS": {preferredFont: "TeX", scale: 100},
+							styles : {
+							".MathJax" : {
+									 "font-size": "100% !important"
+								}
+							}
+						});
+	</script>
+
+</body>
+</html>

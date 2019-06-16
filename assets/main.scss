@@ -4,40 +4,55 @@
 @import "../bower_components/bootstrap/scss/functions";
 @import "variables";
 @import "../bower_components/bootstrap/scss/bootstrap";
+@import url(monokai.css);
 /*
 .content {
   font-size: $custom-font-size;
 }
 */
 
-.my-article {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding:1rem;
-  min-height: 8rem;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+html {
+  position: relative;
+  min-height: 100%;
 }
 
-.my-article h2 {
+body {
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
   font-size: 1.35rem;
 }
 
-.my-article h3 {
-  font-size: 1.1rem;
-  font-style: italic;  
+h3 {
+  font-size: 1.0rem;
 }
 
-.my-article img {
-  margin-right: 1rem;
-  width: 6rem;
-  height: 6rem;
+
+
+.highlight {
+  padding-left: 10px;
 }
 
-.my-article a, .my-article a:hover, .my-article a:visited {
+.footer {
+  padding-top: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+}
+
+.fa, a:hover.fa, a:visited.fa {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 2rem !important;
+  text-align: center;
   text-decoration: none;
-  color: black;
-}
-
-.dist {
-  height: 2rem;
+  border: none;
+  color: white;
 }
