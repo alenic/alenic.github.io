@@ -7,7 +7,13 @@
 {% include navigation.html %}
 
 <article>
-  <h1>{{ page.title }} - <span style="font-size: 0.8em; font-style: italic;">{{ page.subtitle }}</span></h1>
+  <h1 class='title'>{{ page.title }}
+    {{ if page.subtitle != "" }}
+    <br>
+    <span class="subtitle">{{ page.subtitle }}</span>
+  {{endif}}
+
+  </h1>
 
   {{content}}
 

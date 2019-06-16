@@ -6763,6 +6763,17 @@ body {
   padding-top: 5rem;
   padding-bottom: 10rem; }
 
+a, a:hover, a:visited {
+  color: #ff3381; }
+
+.title {
+  color: #ff3381;
+  font-size: 1.5rem; }
+
+.subtitle {
+  font-size: 0.8em;
+  font-style: italic; }
+
 h1 {
   font-size: 1.5rem; }
 
@@ -6776,13 +6787,13 @@ h3 {
   padding-left: 10px; }
 
 .footer {
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 8rem; }
+  height: 6rem; }
 
-.fa, a:hover.fa, a:visited.fa {
+.fa, a.fa, a:hover.fa, a:visited.fa {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   font-size: 2rem !important;

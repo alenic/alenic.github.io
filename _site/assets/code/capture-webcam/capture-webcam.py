@@ -2,8 +2,8 @@ import cv2
 
 webcam_id = 0
 capture = cv2.VideoCapture(webcam_id)
-# Can I set a custom webcam resolution ? Yes, if your webcam can support it, if not the capture.read() will fail
-# comment the following 4 lines of code if you want to use the default resolution
+# You can set custom resolution if your webcam support it, otherwise the method capture.read() will fail
+# (comment the following 4 lines of code if you want to use the default resolution)
 webcam_res_width = 640
 webcam_res_height = 480
 capture.set(3, webcam_res_width)

@@ -5,20 +5,22 @@ subtitle: ""
 date:   2019-06-16 00:00:00 -0600
 categories: snippets
 imgpath: ""
+keywords: "opencv, webcam, capture, python"
 code_folder: /assets/code/capture-webcam
 ---
 
-OpenCV is a simple and nice library for image processing and computer vision. This is a very basic code for starting experiments with your webcam.
+OpenCV is a simple and nice library for image processing and computer vision.
 
-This code in Python 3, captures the webcam's frames and show it. If you press the 'q' key it will exit from the main cycle
+
+This simple code is a start point for experiments with your webcam, infact it captures the webcam's frames and simply show it continuously on a window. If you press the 'q' key it will exit from the main while cycle.
 
 {% highlight python %}
 import cv2
 
 webcam_id = 0
 capture = cv2.VideoCapture(webcam_id)
-# Can I set a custom webcam resolution ? Yes, if your webcam can support it, if not the capture.read() will fail
-# comment the following 4 lines of code if you want to use the default resolution
+# You can set custom resolution if your webcam support it, otherwise the method capture.read() will fail
+# (comment the following 4 lines of code if you want to use the default resolution)
 webcam_res_width = 640
 webcam_res_height = 480
 capture.set(3, webcam_res_width)

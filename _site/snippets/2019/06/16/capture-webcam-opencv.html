@@ -3,6 +3,8 @@
 <!-- head -->
 <head>
     <meta charset="UTF-8">
+    <meta name="keywords" content="opencv, webcam, capture, python" />
+
     <title>Alessandro Nicolosi's blog</title>
     <link rel="stylesheet" href="/assets/main.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -32,18 +34,24 @@
   <!--end_navigation-->
 
 <article>
-  <h1>Capture webcam with opencv - <span style="font-size: 0.8em; font-style: italic;"></span></h1>
+  <h1 class='title'>Capture webcam with opencv
+    
+    <br>
+    <span class="subtitle"></span>
+  
 
-  <p>OpenCV is a simple and nice library for image processing and computer vision. This is a very basic code for starting experiments with your webcam.</p>
+  </h1>
 
-<p>This code in Python 3, captures the webcam’s frames and show it. If you press the ‘q’ key it will exit from the main cycle</p>
+  <p>OpenCV is a simple and nice library for image processing and computer vision.</p>
+
+<p>This simple code is a start point for experiments with your webcam, infact it captures the webcam’s frames and simply show it continuously on a window. If you press the ‘q’ key it will exit from the main while cycle.</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">cv2</span>
 
 <span class="n">webcam_id</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">capture</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="n">webcam_id</span><span class="p">)</span>
-<span class="c1"># Can I set a custom webcam resolution ? Yes, if your webcam can support it, if not the capture.read() will fail
-# comment the following 4 lines of code if you want to use the default resolution
+<span class="c1"># You can set custom resolution if your webcam support it, otherwise the method capture.read() will fail
+# (comment the following 4 lines of code if you want to use the default resolution)
 </span><span class="n">webcam_res_width</span> <span class="o">=</span> <span class="mi">640</span>
 <span class="n">webcam_res_height</span> <span class="o">=</span> <span class="mi">480</span>
 <span class="n">capture</span><span class="o">.</span><span class="nb">set</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">webcam_res_width</span><span class="p">)</span>
@@ -84,9 +92,7 @@
   <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-	<script type="text/javascript"
-		src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-	</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 	<script type="text/x-mathjax-config">
 		MathJax.Hub.Config( 
 						{
