@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<!-- head -->
+<head>
+    <meta charset="UTF-8">
+    <title>A Serious Hobby</title>
+    <link rel="stylesheet" href="/assets/main.css">
+</head>
+<!-- end_head -->
+<body>
+
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript"
+		src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config( 
+						{
+							tex2jax: {inlineMath: [['$','$']],
+												displayMath: [['$$','$$']]
+						},
+							"HTML-CSS": {preferredFont: "TeX", scale: 100},
+							styles : {
+							".MathJax" : {
+									 "font-size": "100% !important"
+								}
+							}
+						});
+	</script>
+
+
+<div class="container">
+
+
+<!--navigation-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="http://localhost:4000"><img src="/assets/img/logo.svg" height="30" alt=""></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="http://localhost:4000">Home<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#">About me</a>
+    </div>
+  </div>
+</nav>
+<div class="row">
+  <div class="dist"></div>
+</div>
+  <!--end_navigation-->
+
+<article>
+  <h1>Multilayer perceptron - <span style="font-size: 0.8em; font-style: italic;">-Reti neurali feedforward-</span></h1>
+
+  <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">bundle exec jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+<p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+
+</article>
+</div>
+
+</body>
+</html>

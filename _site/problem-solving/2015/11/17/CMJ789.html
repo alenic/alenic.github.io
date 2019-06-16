@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<!-- head -->
+<head>
+    <meta charset="UTF-8">
+    <title>A Serious Hobby</title>
+    <link rel="stylesheet" href="/assets/main.css">
+</head>
+<!-- end_head -->
+<body>
+
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript"
+		src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config( 
+						{
+							tex2jax: {inlineMath: [['$','$']],
+												displayMath: [['$$','$$']]
+						},
+							"HTML-CSS": {preferredFont: "TeX", scale: 100},
+							styles : {
+							".MathJax" : {
+									 "font-size": "100% !important"
+								}
+							}
+						});
+	</script>
+
+
+<div class="container">
+
+
+<!--navigation-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="http://localhost:4000"><img src="/assets/img/logo.svg" height="30" alt=""></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="http://localhost:4000">Home<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#">About me</a>
+    </div>
+  </div>
+</nav>
+<div class="row">
+  <div class="dist"></div>
+</div>
+  <!--end_navigation-->
+
+<article>
+  <h1>The College Mathematics Journal, Vol. 35, November 2004 - <span style="font-size: 0.8em; font-style: italic;">Proposed by Zengxiang Tong and Zhen Huang, Westerville, OH</span></h1>
+
+  <p><strong>1</strong>. Show the convergence of the sequence given by $a_1=2\sqrt{2}$ and
+<script type="math/tex">a_n=2^{\frac{n+1}{2}}\sqrt{2^n-\sqrt{4^n-a^2_{n-1}}}</script> 
+for any $n&gt;1$, and find the limit $\lim_{n\to\infty} a_n$.
+<br />
+<strong>2</strong>. Show the convergence of the sequence given by $b_1=2$ and
+<script type="math/tex">b_n=2^{\frac{n}{2}}\sqrt{2^{n-1}-\sqrt{4^{n-1}-b^2_{n-1}}}</script> 
+for any $n&gt;1$, and find the limit $\lim_{n\to\infty} b_n$.</p>
+
+<p><em>Solution proposed by G.R.A.20 Math Problems Group, Roma, Italy.</em>
+<br /><br />
+For $n\geq 2$ let $A_n$ be the area
+of the regular $2^n$-polygon inscribed in the
+circumference of radius $1$.
+Then $A_n=2^{n-1}\sin(\pi/2^{n-1})$.</p>
+
+<p>Morever, for $n\gt3$ we have that
+$\cos(\pi/2^{n-2})\geq 0$ and</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{eqnarray*}
+A_n&=&2^{n-1}\sqrt{\frac{1-\cos(\pi/2^{n-2})}{2}}\\
+&=&2^{n-\frac{3}{2}}\sqrt{1-\sqrt{1-\sin^2(\pi/2^{n-2})}}\\
+&=&2^{n-\frac{3}{2}}\sqrt{1-\sqrt{1-(A_{n-1}/2^{n-2})^2}}\\
+&=&2^{\frac{n-1}{2}}\sqrt{2^{n-2}-\sqrt{4^{n-2}-A_{n-1}^2}}.
+\end{eqnarray*} %]]></script>
+
+<p>Since $a_1=b_2=A_3=2\sqrt{2}$ then $a_{n-2}=b_{n-1}=A_{n}$ and for $n\gt3$. Therefore in both cases the limit is the area of the circle of radius $1$, that is $\pi$.</p>
+
+<script type="math/tex; mode=display">\square</script>
+
+
+</article>
+</div>
+
+</body>
+</html>

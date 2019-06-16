@@ -1,0 +1,43 @@
+---
+---
+
+@import "../bower_components/bootstrap/scss/functions";
+@import "variables";
+@import "../bower_components/bootstrap/scss/bootstrap";
+/*
+.content {
+  font-size: $custom-font-size;
+}
+*/
+
+.my-article {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding:1rem;
+  min-height: 8rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.my-article h2 {
+  font-size: 1.35rem;
+}
+
+.my-article h3 {
+  font-size: 1.1rem;
+  font-style: italic;  
+}
+
+.my-article img {
+  margin-right: 1rem;
+  width: 6rem;
+  height: 6rem;
+}
+
+.my-article a, .my-article a:hover, .my-article a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.dist {
+  height: 2rem;
+}
