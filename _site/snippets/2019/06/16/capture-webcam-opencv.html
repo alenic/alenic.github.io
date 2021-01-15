@@ -18,14 +18,14 @@
 <!--navigation-->
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <a class="navbar-brand" href="http://localhost:4000"><img src="/assets/img/logo.png" height="30" alt=""></a>
+  <a class="navbar-brand" href=""><img src="/assets/img/logo.png" height="30" alt=""></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="http://localhost:4000">Home<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link active" href="">Home<span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" href="#">About me</a>
     </div>
   </div>
@@ -50,9 +50,11 @@
 
 <span class="n">webcam_id</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">capture</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="n">webcam_id</span><span class="p">)</span>
-<span class="c1"># You can set custom resolution if your webcam can support it, otherwise the method capture.read() fails
-# (comment the following 4 lines of code if you want to use the default webcam resolution)
-</span><span class="n">webcam_res_width</span> <span class="o">=</span> <span class="mi">640</span>
+<span class="c"># You can set custom resolution if your webcam can support it, otherwise the method capture.read() fails
+</span>
+<span class="c"># (comment the following 4 lines of code if you want to use the default webcam resolution)
+</span>
+<span class="n">webcam_res_width</span> <span class="o">=</span> <span class="mi">640</span>
 <span class="n">webcam_res_height</span> <span class="o">=</span> <span class="mi">480</span>
 <span class="n">capture</span><span class="o">.</span><span class="nb">set</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">webcam_res_width</span><span class="p">)</span>
 <span class="n">capture</span><span class="o">.</span><span class="nb">set</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">webcam_res_height</span><span class="p">)</span>
@@ -60,19 +62,25 @@
 <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
   <span class="n">ret</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">capture</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
   <span class="k">if</span> <span class="n">ret</span><span class="p">:</span>
-    <span class="c1"># process the frame
-</span>    <span class="c1"># ...
-</span>    <span class="c1"># show the frame
-</span>    <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s">'original frame'</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
-    <span class="c1"># wait millis_delay milliseconds for a pressed key (if millis_delay &lt;= 0 waits a key events indefinitely)
-</span>    <span class="n">millis_delay</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="c"># process the frame
+</span>
+    <span class="c"># ...
+</span>
+    <span class="c"># show the frame
+</span>
+    <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s">'original frame'</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+    <span class="c"># wait millis_delay milliseconds for a pressed key (if millis_delay &lt;= 0 waits a key events indefinitely)
+</span>
+    <span class="n">millis_delay</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="n">key_pressed</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="n">millis_delay</span><span class="p">)</span>
-    <span class="c1"># break the while cycle if the key q is pressed
-</span>    <span class="k">if</span> <span class="n">key_pressed</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="s">'q'</span><span class="p">):</span>
+    <span class="c"># break the while cycle if the key q is pressed
+</span>
+    <span class="k">if</span> <span class="n">key_pressed</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="s">'q'</span><span class="p">):</span>
       <span class="k">break</span>
 
-<span class="c1"># Safetly close the video capture and imshow windows
-</span><span class="n">capture</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+<span class="c"># Safetly close the video capture and imshow windows
+</span>
+<span class="n">capture</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
 <span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span></code></pre></figure>
 
 <p>You can download the code from: <a href="/assets/code/capture-webcam/capture-webcam.py">capture-webcam.py</a></p>
