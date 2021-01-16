@@ -12,7 +12,7 @@ code_folder: /assets/code/capture-webcam
 OpenCV is a simple and nice library for image processing and computer vision.
 
 
-This simple code is a start point for experiments with your webcam, infact it captures the webcam's frames and simply show it continuously on a window. If you press the 'q' key it will exit from the main while cycle.
+This simple code is a start point for experiments with your webcam. If you press the 'q' key it will exit from the main cycle.
 
 {% highlight python %}
 import cv2
