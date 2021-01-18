@@ -18,8 +18,10 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import accuracy_score
 import numpy as np
 
+# Random seed for reproducibility
 RANDOM_SEED = 123
 
+# Load dataset (digits is a dataset composet of images 8x8 of digits from 0 to 9)
 digits = datasets.load_digits()
 
 X = digits.images.reshape((-1, 8*8))

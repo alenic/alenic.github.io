@@ -69,8 +69,12 @@
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
 
+<span class="c"># Random seed for reproducibility
+</span>
 <span class="n">RANDOM_SEED</span> <span class="o">=</span> <span class="mi">123</span>
 
+<span class="c"># Load dataset (digits is a dataset composet of images 8x8 of digits from 0 to 9)
+</span>
 <span class="n">digits</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_digits</span><span class="p">()</span>
 
 <span class="n">X</span> <span class="o">=</span> <span class="n">digits</span><span class="o">.</span><span class="n">images</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="o">*</span><span class="mi">8</span><span class="p">))</span>
