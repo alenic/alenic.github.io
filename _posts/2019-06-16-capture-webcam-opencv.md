@@ -45,5 +45,3 @@ capture.release()
 cv2.destroyAllWindows()
 
 {% endhighlight %}
-
-You can download the code from: [capture-webcam.py]({{page.code_folder}}/capture-webcam.py)

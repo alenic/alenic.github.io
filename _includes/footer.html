@@ -1,7 +1,24 @@
-<footer class="footer bg-dark text-light text-center">
-    <div class="container">
-      <br>
-      <a href="https://github.com/alenic" class="fa fa-github"></a>
-      <a href="https://www.linkedin.com/in/alessandro-nicolosi-88a29b7b/" class="fa fa-linkedin"></a>
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          {% if site.github_username %}
+          <li>
+            {% include icon-github.html username=site.github_username %}
+          </li>
+          {% endif %}
+        </ul>
+      </div>
     </div>
+
+  </div>
+
 </footer>

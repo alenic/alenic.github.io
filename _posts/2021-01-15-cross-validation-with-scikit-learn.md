@@ -55,5 +55,3 @@ for fold, indexes in enumerate(train_val_index_list, 1):
 print(f"Cross-validation accuracy: {np.mean(fold_accuracy):4f}")
 
 {% endhighlight %}
-
-You can download the code from: [cross-validation.py]({{page.code_folder}}/cross-validation.py)
