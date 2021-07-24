@@ -4,4 +4,4 @@ title: About me
 permalink: /about/
 ---
 
-I am a control engineer focused on Machine Learning and Reinforcement Learning technologies.
+Hi, I am a control engineer focused on Deep Learning and Reinforcement Learning technologies. My job is mainly focused on computer vision technologies.
